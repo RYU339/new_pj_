@@ -4,4 +4,9 @@ from django.shortcuts import render
 # Create your views here.
 
 def hello_world(request):
-    return render(request, 'accountapp/gogo.html')
+    if request.method == 'POST':
+        return render(request, 'accountapp/gogo.html',
+                      context={'text' : 'POST METHOD!'})
+    else:
+        return render(request, 'accountapp/gogo.html',
+                      context={'text' : 'HI THERE'})
