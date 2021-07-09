@@ -6,7 +6,7 @@ from django.shortcuts import render
 def hello_world(request):
     if request.method == 'POST':
         return render(request, 'accountapp/gogo.html',
-                      context={'text' : 'POST METHOD!'})
+                      context={'text' : 'HELLO'})
     else:
         return render(request, 'accountapp/gogo.html',
                       context={'text' : 'HI THERE'})
