@@ -14,7 +14,9 @@
 
         </form>
 
-        <h4>{{ new_model.text }}</h4>
+        {% for data in data_list %}
+        <h4>{{ data.text }}</h4>
+        {% endfor %}
     </div>
 
 

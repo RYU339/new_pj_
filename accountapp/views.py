@@ -14,8 +14,10 @@ def hello_world(request):
         new_model.text = temp
         new_model.save()
 
+        data_list = NewModel.objects.all()
         return render(request, 'accountapp/gogo.html',
-                      context={'new_model':new_model})
+                      context={'data_list' : data_list})
     else:
+        data_list = NewModel.objects.all()
         return render(request, 'accountapp/gogo.html',
-                      context={'text':'HI THERE'})
+                      context={'data_list' : data_list})
