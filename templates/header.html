@@ -6,8 +6,24 @@
     <div class="gogo_header_button">
         <span>menu</span>
         <span>diary</span>
-        <span>archive</span>
-        <span>link</span>
+        {% if not user.is_authenticated %}
+        <span>
+            <a href="{% url 'accountapp:login' %}">
+                Login
+            </a>
+        </span>
+        <span>
+            <a href="{% url 'accountapp:create' %}">
+                Sign Up
+            </a>
+        </span>
+        {% else %}
+        <span>
+            <a href="{% url 'accountapp:logout' %}">
+                Logout
+            </a>
+        </span>
+        {% endif %}
     </div>
 
 </div>
