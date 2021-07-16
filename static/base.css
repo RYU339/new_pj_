@@ -13,3 +13,8 @@
 .gogo_footer_logo{
     margin: 2rem 0; font-family: 'Bebas Neue', cursive;
 }
+
+.mw-500{
+    max-width: 500px;
+    padding: 1rem 1.5rem;
+}
