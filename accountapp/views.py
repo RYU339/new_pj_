@@ -11,7 +11,7 @@ from django.views.generic import CreateView, DetailView, UpdateView, DeleteView
 
 from accountapp.forms import AccountCreationForm
 from accountapp.models import NewModel
-from accountapp.templates.accountapp.decorators import account_ownership_required
+from decorators import account_ownership_required
 
 
 @login_required
