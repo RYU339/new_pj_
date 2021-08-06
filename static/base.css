@@ -41,3 +41,12 @@
 .round_button:hover{
     color: gray;
 }
+
+.article_content{
+    font-size: 1.1rem;
+    text-align: left;
+}
+
+.article_image{
+    width: 60%;
+}
