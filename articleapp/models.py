@@ -15,4 +15,6 @@ class Article(models.Model):
     image = models.ImageField(upload_to='article/', null=True)
     content = models.TextField(null=True)
 
-    created_at = models.DateField(auto_now_add=True, null=True)
+    created_at = models.DateField(auto_now_add=True, null=True)\
+
+    like = models.IntegerField(default=0)
