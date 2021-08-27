@@ -1,44 +1,48 @@
 <div style="text-align: center;">
 
     <div class="gogo_header_logo">
-        <h1>Go!</h1>
+        <h1>
+            <a href="{% url 'home' %}">
+                Go!
+            </a>
+        </h1>
     </div>
     <div class="gogo_header_button">
-        <span>
+        <span class="mx-2">
             <a href="{% url 'articleapp:list' %}">
                 List
             </a>
         </span>
-        <span>
+        <span class="mx-2">
             <a href="{% url 'projectapp:list' %}">
                 Projects
             </a>
         </span>
     {% if user.is_authenticated %}
-        <span>
+        <span class="mx-2">
             <a href="{% url 'subscribeapp:list' %}">
                 Subsciption
             </a>
         </span>
     {% endif %}
         {% if not user.is_authenticated %}
-        <span>
+        <span class="mx-2">
             <a href="{% url 'accountapp:login' %}">
                 Login
             </a>
         </span>
-        <span>
+        <span class="mx-2">
             <a href="{% url 'accountapp:create' %}">
                 Sign Up
             </a>
         </span>
         {% else %}
-        <span>
+        <span class="mx-2">
             <a href="{% url 'accountapp:detail' pk=user.pk %}">
                 Info
             </a>
         </span>
-        <span>
+        <span class="mx-2">
             <a href="{% url 'accountapp:logout' %}">
                 Logout
             </a>
