@@ -84,3 +84,6 @@ __pycache__/
 media/
 
 staticfiles/
+
+gis_4_gcp
+gis_4_gcp.pub
