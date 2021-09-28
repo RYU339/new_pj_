@@ -22,6 +22,8 @@ services:
       - new_pj_media:/home/new_pj_/media/
     secrets:
       - DJANGO_SECRET_KEY
+      - MARIADB_USER
+      - MARIADB_PASSWORD
 
   mariadb:
     image: mariadb:10.5
@@ -29,11 +31,16 @@ services:
       - new_pj_network
     volumes:
       - new_pj_mariadb:/var/lib/mysql
+    secrets:
+      - MARIADB_ROOT_PASSWORD
+      - MARIADB_USER
+      - MARIADB_PASSWORD
     environment:
       MARIADB_ROOT_PASSWORD: password123
       MARIADB_DATABASE: django
       MARIADB_USER: django
       MARIADB_PASSWORD: password123
+
 
 networks:
   new_pj_network:
