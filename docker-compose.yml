@@ -14,7 +14,7 @@ services:
       - new_pj_media:/data/media/
 
   django:
-    image: new_pj_django:4
+    image: new_pj_django:5
     networks:
       - new_pj_network
     volumes:
@@ -52,4 +52,10 @@ volumes:
 
 secrets:
   DJANGO_SECRET_KEY:
+    external: true
+  MARIADB_ROOT_PASSWORD:
+    external: true
+  MARIADB_USER:
+    external: true
+  MARIADB_PASSWORD:
     external: true
