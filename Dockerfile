@@ -2,7 +2,7 @@ FROM python:3.9.0
 
 WORKDIR /home/
 
-RUN echo 'lrojksja'
+RUN echo 'fgdsergf'
 
 RUN git clone https://github.com/RYU339/new_pj_.git
 
