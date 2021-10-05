@@ -12,6 +12,7 @@ services:
       - /home/ryuryuryu339/nginx.conf:/etc/nginx/nginx.conf
       - new_pj_static:/data/static/
       - new_pj_media:/data/media/
+      - new_pj_log:/var/log/nginx/
 
   django:
     image: new_pj_django:5
@@ -49,6 +50,7 @@ volumes:
   new_pj_static:
   new_pj_media:
   new_pj_mariadb:
+  new_pj_log:
 
 secrets:
   DJANGO_SECRET_KEY:
